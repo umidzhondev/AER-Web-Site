@@ -1,0 +1,124 @@
+.navbar {
+    width: 100%;
+    padding: 32px 64px 32px 0;
+    padding-left: 100px;
+    @include flex(space-between, center, row);
+
+    @include responsive(xl) {
+        padding-left: 75px;
+    }
+
+    @include responsive(lg) {
+        padding-left: 45px;
+    }
+
+    @include responsive(md) {
+        padding: 32px 32px 32px 0;
+        padding-left: 30px;
+    }
+
+    @include responsive(sm) {
+        padding: 20px 32px 20px 0;
+        padding-left: 30px;
+    }
+    @include responsive(xs) {
+     padding-left: 20px;                   
+    }
+
+    &__logo {
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include responsive(md) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__right {
+        @include flex(space-between, center, row);
+
+        .navigation {
+            @include flex(space-between, center, row);
+
+            @include responsive(sm) {
+                display: none;
+            }
+
+            &__item {
+                margin: 0 40px;
+
+                @include responsive(lg) {
+                    margin: 0 26px;
+                }
+
+                @include responsive(md) {
+                    margin: 0 18px;
+                }
+            }
+
+            &__link {
+                font-size: 1.2rem;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                @include flex(center, center, row);
+
+                @include responsive(lg) {
+                    font-size: 1.1rem;
+                }
+
+                @include responsive(md) {
+                    font-size: 1rem;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -15px;
+                    height: 2px;
+                    background-color: $color-yellow;
+                    width: 0%;
+                    transition: .3s ease;
+
+                    @include responsive(md) {
+                        bottom: -10px;
+                    }
+                }
+
+                &:hover {
+                    color: $color-yellow;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .search__icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 45px;
+            margin-left: 30px;
+
+            @include responsive(lg) {
+                width: 20px;
+                height: 20px;
+            }
+
+            @include responsive(md) {
+                width: 18px;
+                height: 18px;
+            }
+
+            @include responsive(sm) {
+                width: 20px;
+                height: 20px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
