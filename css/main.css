@@ -537,14 +537,14 @@ a {
 
 @media screen and (max-width: 1400px) {
   .home__main-body {
-    margin: 150px 0;
+    margin: 140px 0;
     padding-left: 75px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .home__main-body {
-    margin: 150px 0;
+    margin: 140px 0;
   }
 }
 
