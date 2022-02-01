@@ -138,6 +138,7 @@
             @include flex(space-between, flex-start, row);
 
             @include responsive(xl) {
+                margin: 150px 0;
                 padding-left: 75px;
             }
 
